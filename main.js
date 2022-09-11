@@ -57,7 +57,7 @@ function nextMove(row, col, endRow, endCol) {
     }
   }
 
-  if (row + 1 >= 0) {
+  if (row + 1 <= 7) {
     if (col - 2 >= 0) {
       nextMove(row + 1, col - 2);
     }
