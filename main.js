@@ -65,4 +65,6 @@ function nextMove(row, col, endRow, endCol) {
       nextMove(row + 1, col + 2);
     }
   }
+
+  return vertices;
 }
