@@ -39,43 +39,43 @@ function nextMove(row, col, endRow, endCol) {
     vertices7,
     vertices8;
 
+  let paths = [];
+
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
-      vertices1 = [...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)]);
     }
     if (col + 1 <= 7) {
-      vertices2 = [...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)]);
     }
   }
 
   if (row + 2 <= 7) {
     if (col - 1 >= 0) {
-      vertices3 = [...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)]);
     }
     if (col + 1 <= 7) {
-      vertices4 = [...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)]);
     }
   }
 
   if (row - 1 >= 0) {
     if (col - 2 >= 0) {
-      vertices5 = [...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)]);
     }
     if (col + 2 <= 7) {
-      vertices6 = [...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)]);
     }
   }
 
   if (row + 1 <= 7) {
     if (col - 2 >= 0) {
-      vertices7 = [...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)]);
     }
     if (col + 2 <= 7) {
-      vertices8 = [...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)];
+      paths.push([...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)]);
     }
   }
-
-  return vertices;
 }
 
 console.log(nextMove(1, 3, 4, 3));
