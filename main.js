@@ -22,9 +22,9 @@ function knightMoves(vertex1, vertex2) {
   let endCol = vertex2[1];
 }
 
-function nextMove(startRow, startCol) {
-  // if (row - 2 >= 0) {
-  //   if (col - 1 >= 0) {
-  //   }
-  // }
+function nextMove(row, col) {
+  if (row - 2 >= 0) {
+    if (col - 1 >= 0) {
+    }
+  }
 }
