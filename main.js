@@ -13,4 +13,6 @@ function createBoard() {
 }
 
 let gameBoard = createBoard();
-console.log(gameBoard);
+// console.log(gameBoard);
+
+function knightMoves(vertex1, vertex2) {}
