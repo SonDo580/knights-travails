@@ -16,8 +16,8 @@ let gameBoard = createBoard();
 // console.log(gameBoard);
 
 function knightMoves(vertex1, vertex2) {
-  let initRow = vertex1[0];
-  let initCol = vertex1[1];
-  let destRow = vertex2[0];
-  let destCol = vertex2[1];
+  let startRow = vertex1[0];
+  let startCol = vertex1[1];
+  let endRow = vertex2[0];
+  let endCol = vertex2[1];
 }
