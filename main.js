@@ -76,6 +76,16 @@ function nextMove(row, col, endRow, endCol) {
       paths.push([...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)]);
     }
   }
+
+  let shortestPath = paths[0];
+  for (let path of paths) {
+    if (path.length < shortestPath) {
+      shortestPath = path;
+    }
+  }
+
+  vertices = [...vertices, ...shortestPath];
+  return vertices;
 }
 
 console.log(nextMove(1, 3, 4, 3));
