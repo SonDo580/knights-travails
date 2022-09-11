@@ -22,9 +22,13 @@ function knightMoves(vertex1, vertex2) {
   let endCol = vertex2[1];
 }
 
-function nextMove(row, col) {
+function nextMove(row, col, endRow, endCol) {
   let vertices = [];
   vertices.push([row, col]);
+
+  if (row === endRow && col === endCol) {
+    return vertices;
+  }
 
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
