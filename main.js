@@ -25,6 +25,37 @@ function knightMoves(vertex1, vertex2) {
 function nextMove(row, col) {
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
+      nextMove(row - 2, col - 1);
+    }
+    if (col + 1 <= 7) {
+      nextMove(row - 2, col + 1);
+    }
+  }
+
+  if (row + 2 <= 7) {
+    if (col - 1 >= 0) {
+      nextMove(row + 2, col - 1);
+    }
+    if (col + 1 <= 7) {
+      nextMove(row + 2, col + 1);
+    }
+  }
+
+  if (row - 1 >= 0) {
+    if (col - 2 >= 0) {
+      nextMove(row - 1, col - 2);
+    }
+    if (col + 2 <= 7) {
+      nextMove(row - 1, col + 2);
+    }
+  }
+
+  if (row + 1 >= 0) {
+    if (col - 2 >= 0) {
+      nextMove(row + 1, col - 2);
+    }
+    if (col + 2 <= 7) {
+      nextMove(row + 1, col + 2);
     }
   }
 }
