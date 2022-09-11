@@ -30,15 +30,6 @@ function nextMove(row, col, endRow, endCol) {
     return vertices;
   }
 
-  let vertices1,
-    vertices2,
-    vertices3,
-    vertices4,
-    vertices5,
-    vertices6,
-    vertices7,
-    vertices8;
-
   let paths = [];
 
   if (row - 2 >= 0) {
