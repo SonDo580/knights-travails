@@ -23,6 +23,8 @@ function knightMoves(vertex1, vertex2) {
 }
 
 function nextMove(row, col) {
+  let vertices = [];
+
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
       nextMove(row - 2, col - 1);
