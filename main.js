@@ -30,41 +30,52 @@ function nextMove(row, col, endRow, endCol) {
     return vertices;
   }
 
+  let vertices1,
+    vertices2,
+    vertices3,
+    vertices4,
+    vertices5,
+    vertices6,
+    vertices7,
+    vertices8;
+
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
-      vertices = [...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)];
+      vertices1 = [...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)];
     }
     if (col + 1 <= 7) {
-      vertices = [...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)];
+      vertices2 = [...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)];
     }
   }
 
   if (row + 2 <= 7) {
     if (col - 1 >= 0) {
-      vertices = [...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)];
+      vertices3 = [...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)];
     }
     if (col + 1 <= 7) {
-      vertices = [...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)];
+      vertices4 = [...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)];
     }
   }
 
   if (row - 1 >= 0) {
     if (col - 2 >= 0) {
-      vertices = [...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)];
+      vertices5 = [...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)];
     }
     if (col + 2 <= 7) {
-      vertices = [...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)];
+      vertices6 = [...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)];
     }
   }
 
   if (row + 1 <= 7) {
     if (col - 2 >= 0) {
-      vertices = [...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)];
+      vertices7 = [...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)];
     }
     if (col + 2 <= 7) {
-      vertices = [...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)];
+      vertices8 = [...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)];
     }
   }
 
   return vertices;
 }
+
+console.log(nextMove(1, 3, 4, 3));
