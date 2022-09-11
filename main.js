@@ -21,3 +21,10 @@ function knightMoves(vertex1, vertex2) {
   let endRow = vertex2[0];
   let endCol = vertex2[1];
 }
+
+function nextMove(startRow, startCol) {
+  // if (row - 2 >= 0) {
+  //   if (col - 1 >= 0) {
+  //   }
+  // }
+}
