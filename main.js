@@ -32,37 +32,37 @@ function nextMove(row, col, endRow, endCol) {
 
   if (row - 2 >= 0) {
     if (col - 1 >= 0) {
-      nextMove(row - 2, col - 1);
+      vertices = [...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)];
     }
     if (col + 1 <= 7) {
-      nextMove(row - 2, col + 1);
+      vertices = [...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)];
     }
   }
 
   if (row + 2 <= 7) {
     if (col - 1 >= 0) {
-      nextMove(row + 2, col - 1);
+      vertices = [...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)];
     }
     if (col + 1 <= 7) {
-      nextMove(row + 2, col + 1);
+      vertices = [...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)];
     }
   }
 
   if (row - 1 >= 0) {
     if (col - 2 >= 0) {
-      nextMove(row - 1, col - 2);
+      vertices = [...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)];
     }
     if (col + 2 <= 7) {
-      nextMove(row - 1, col + 2);
+      vertices = [...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)];
     }
   }
 
   if (row + 1 <= 7) {
     if (col - 2 >= 0) {
-      nextMove(row + 1, col - 2);
+      vertices = [...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)];
     }
     if (col + 2 <= 7) {
-      nextMove(row + 1, col + 2);
+      vertices = [...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)];
     }
   }
 
