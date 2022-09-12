@@ -70,7 +70,9 @@ function backTracking(visited, dest) {
 }
 
 function knightMoves(src, dest) {
-  const shortestPath = findShortestPath(src, dest);
+  const srcNode = NodeFactory(...src);
+  const destNode = NodeFactory(...dest);
+  const shortestPath = findShortestPath(srcNode, destNode);
 
   const path = shortestPath.map((node) => {
     let row = node.row;
