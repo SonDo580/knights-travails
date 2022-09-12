@@ -30,7 +30,7 @@ function findShortestPath(src, dest) {
       return visited;
     }
 
-    if (visited.findIndex(node) === -1) {
+    if (visited.indexOf(node) === -1) {
       visited.push(node);
     }
 
@@ -48,3 +48,8 @@ function findShortestPath(src, dest) {
 
   return null; // If the path is not possible
 }
+
+const src = NodeFactory(1, 2);
+const dest = NodeFactory(3, 4);
+
+console.log(findShortestPath(src, dest));
