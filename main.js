@@ -1,9 +1,11 @@
+const SIDE = 8;
+
 function createBoard() {
   let arr = [];
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < SIDE; i++) {
     let row = [];
-    for (let j = 0; j < 8; j++) {
+    for (let j = 0; j < SIDE; j++) {
       row.push("");
     }
     arr.push(row);
@@ -36,16 +38,16 @@ function nextMove(row, col, endRow, endCol) {
     if (col - 1 >= 0) {
       paths.push([...vertices, ...nextMove(row - 2, col - 1, endRow, endCol)]);
     }
-    if (col + 1 <= 7) {
+    if (col + 1 < SIDE) {
       paths.push([...vertices, ...nextMove(row - 2, col + 1, endRow, endCol)]);
     }
   }
 
-  if (row + 2 <= 7) {
+  if (row + 2 < SIDE) {
     if (col - 1 >= 0) {
       paths.push([...vertices, ...nextMove(row + 2, col - 1, endRow, endCol)]);
     }
-    if (col + 1 <= 7) {
+    if (col + 1 < SIDE) {
       paths.push([...vertices, ...nextMove(row + 2, col + 1, endRow, endCol)]);
     }
   }
@@ -54,16 +56,16 @@ function nextMove(row, col, endRow, endCol) {
     if (col - 2 >= 0) {
       paths.push([...vertices, ...nextMove(row - 1, col - 2, endRow, endCol)]);
     }
-    if (col + 2 <= 7) {
+    if (col + 2 < SIDE) {
       paths.push([...vertices, ...nextMove(row - 1, col + 2, endRow, endCol)]);
     }
   }
 
-  if (row + 1 <= 7) {
+  if (row + 1 < SIDE) {
     if (col - 2 >= 0) {
       paths.push([...vertices, ...nextMove(row + 1, col - 2, endRow, endCol)]);
     }
-    if (col + 2 <= 7) {
+    if (col + 2 < SIDE) {
       paths.push([...vertices, ...nextMove(row + 1, col + 2, endRow, endCol)]);
     }
   }
