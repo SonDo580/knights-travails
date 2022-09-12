@@ -56,7 +56,10 @@ function backTracking(visited, dest) {
 
   let prev = dest.prev;
   for (let i = visited.length - 1; i >= 0; i--) {
-    // if (visited[i].prev )
+    if (visited[i] === prev) {
+      path.push(visited[i]);
+      prev = visited[i].prev;
+    }
   }
 }
 
