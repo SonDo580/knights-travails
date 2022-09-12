@@ -40,6 +40,7 @@ function findShortestPath(src, dest) {
       let nextCol = col + colMove[i];
 
       if (isValid(nextRow, nextCol)) {
+        const nextNode = NodeFactory(nextRow, nextCol);
       }
     }
   }
