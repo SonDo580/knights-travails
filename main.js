@@ -1,22 +1,5 @@
 const SIDE = 8;
 
-function createBoard() {
-  let arr = [];
-
-  for (let i = 0; i < SIDE; i++) {
-    let row = [];
-    for (let j = 0; j < SIDE; j++) {
-      row.push("");
-    }
-    arr.push(row);
-  }
-
-  return arr;
-}
-
-let gameBoard = createBoard();
-// console.log(gameBoard);
-
 function knightMoves(vertex1, vertex2) {
   let startRow = vertex1[0];
   let startCol = vertex1[1];
