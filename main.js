@@ -86,17 +86,6 @@ function knightMoves(src, dest) {
   }
 }
 
+knightMoves([4, 5], [4, 5]);
 knightMoves([3, 3], [4, 3]);
-
-// const src = NodeFactory(3, 3);
-// const dest = NodeFactory(4, 3);
-
-// const shortestPath = findShortestPath(src, dest);
-
-// const path = shortestPath.map((node) => {
-//   let row = node.row;
-//   let col = node.col;
-//   return [row, col];
-// });
-
-// console.log(path);
+knightMoves([3, 3], [7, 6]);
