@@ -27,7 +27,7 @@ function findShortestPath(src, dest) {
 
     if (row === dest.row && col === dest.col) {
       visited.push(node);
-      return visited;
+      return backTracking(visited, node);
     }
 
     if (visited.indexOf(node) === -1) {
