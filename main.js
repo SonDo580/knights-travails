@@ -14,12 +14,15 @@ function isValid(row, col) {
   return row >= 0 && row < SIDE && col >= 0 && col < SIDE;
 }
 
-// This returns the shortest path from src to dest
+// This returns the shortest path from src to dest using breadth-first search
 function knightMoves(src, dest) {
   const queue = [];
   queue.push(src);
 
   while (queue.length > 0) {
-    node = queue.shift();
+    const node = queue.shift();
+
+    let row = node.row;
+    let col = node.col;
   }
 }
