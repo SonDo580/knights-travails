@@ -61,6 +61,8 @@ function backTracking(visited, dest) {
       prev = visited[i].prev;
     }
   }
+
+  return path;
 }
 
 const src = NodeFactory(0, 0);
