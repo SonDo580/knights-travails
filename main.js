@@ -19,6 +19,8 @@ function knightMoves(src, dest) {
   const queue = [];
   queue.push(src);
 
+  let visited = [];
+
   while (queue.length > 0) {
     const node = queue.shift();
 
