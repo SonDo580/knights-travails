@@ -21,15 +21,16 @@ function findShortestPath(src, dest) {
 
   while (queue.length > 0) {
     const node = queue.shift();
-    if (visited.findIndex(node) === -1) {
-      visited.push(node);
-    }
 
     let row = node.row;
     let col = node.col;
 
     if (row === dest.row && col === dest.col) {
       return visited;
+    }
+
+    if (visited.findIndex(node) === -1) {
+      visited.push(node);
     }
   }
 }
