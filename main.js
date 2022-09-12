@@ -5,8 +5,8 @@ const rowMove = [2, 2, -2, -2, 1, 1, -1, -1];
 const colMove = [-1, 1, -1, 1, 2, -2, 2, -2];
 
 // Represent a cell as a node in a tree
-function NodeFactory(row, col) {
-  return { row, col };
+function NodeFactory(row, col, prev = null) {
+  return { row, col, prev };
 }
 
 function isValid(row, col) {
