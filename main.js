@@ -15,7 +15,7 @@ function isValid(row, col) {
 }
 
 // This returns the shortest path from src to dest using breadth-first search
-function knightMoves(src, dest) {
+function findShortestPath(src, dest) {
   const queue = [];
   queue.push(src);
 
