@@ -45,4 +45,6 @@ function findShortestPath(src, dest) {
       }
     }
   }
+
+  return Infinity; // If the path is not possible
 }
