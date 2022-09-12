@@ -51,10 +51,11 @@ function findShortestPath(src, dest) {
 
 // Show the path from destination to source
 function backTracking(visited, node) {
-  // Note: node (parameter) is the last element of visited array
-  let backPath = [];
+  const path = [];
+  path.push(node);
+
   for (let i = visited.length - 1; i >= 0; i--) {
-    if (visited[i].prev )
+    // if (visited[i].prev )
   }
 }
 
