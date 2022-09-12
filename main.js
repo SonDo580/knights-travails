@@ -78,8 +78,10 @@ function knightMoves(src, dest) {
     return [row, col];
   });
 
-  // console.log(`You made it in ${path.length - 1}! Here's your path:`);
-  // console.log();
+  console.log(`You made it in ${path.length - 1}! Here's your path:`);
+  for (let node of path) {
+    console.log(node);
+  }
 }
 
 // const src = NodeFactory(3, 3);
