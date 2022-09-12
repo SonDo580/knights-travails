@@ -6,8 +6,8 @@ const colMove = [-1, 1, -1, 1, 2, -2, 2, -2];
 
 // Represent a cell as a node in a tree
 // Distance: number of moves from src
-function NodeFactory(row, col, distance = 0) {
-  return { row, col, distance };
+function NodeFactory(row, col) {
+  return { row, col };
 }
 
 function isValid(row, col) {
@@ -24,5 +24,8 @@ function knightMoves(src, dest) {
 
     let row = node.row;
     let col = node.col;
+
+    if (row === dest.row && col === dest.col) {
+    }
   }
 }
