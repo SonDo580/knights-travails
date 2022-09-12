@@ -35,5 +35,12 @@ function findShortestPath(src, dest) {
     }
 
     // Check all 8 possible moves
+    for (let i = 1; i <= 8; i++) {
+      let nextRow = row + rowMove[i];
+      let nextCol = col + colMove[i];
+
+      if (isValid(nextRow, nextCol)) {
+      }
+    }
   }
 }
