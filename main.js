@@ -66,7 +66,7 @@ function backTracking(visited, dest) {
     }
   }
 
-  return path;
+  return path.reverse();
 }
 
 const src = NodeFactory(0, 0);
