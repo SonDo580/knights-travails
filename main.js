@@ -29,6 +29,7 @@ function knightMoves(src, dest) {
     let col = node.col;
 
     if (row === dest.row && col === dest.col) {
+      return visited;
     }
   }
 }
