@@ -69,7 +69,7 @@ function backTracking(visited, dest) {
   return path.reverse();
 }
 
-const src = NodeFactory(0, 0);
-const dest = NodeFactory(1, 2);
+const src = NodeFactory(3, 3);
+const dest = NodeFactory(4, 3);
 
 console.log(findShortestPath(src, dest));
