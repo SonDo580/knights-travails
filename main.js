@@ -69,11 +69,28 @@ function backTracking(visited, dest) {
   return path.reverse();
 }
 
-function knightMove(src, dest) {
+function knightMoves(src, dest) {
   const shortestPath = findShortestPath(src, dest);
+
+  const path = shortestPath.map((node) => {
+    let row = node.row;
+    let col = node.col;
+    return [row, col];
+  });
+
+  // console.log(`You made it in ${path.length - 1}! Here's your path:`);
+  // console.log();
 }
 
-const src = NodeFactory(3, 3);
-const dest = NodeFactory(4, 3);
+// const src = NodeFactory(3, 3);
+// const dest = NodeFactory(4, 3);
 
-console.log(findShortestPath(src, dest));
+// const shortestPath = findShortestPath(src, dest);
+
+// const path = shortestPath.map((node) => {
+//   let row = node.row;
+//   let col = node.col;
+//   return [row, col];
+// });
+
+// console.log(path);
