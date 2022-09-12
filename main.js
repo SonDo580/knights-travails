@@ -49,6 +49,11 @@ function findShortestPath(src, dest) {
   return null; // If the path is not possible
 }
 
+// Show the path from destination to source
+function backTracking(visited, node) {
+  // Note: node (parameter) is the last element of visited array
+}
+
 const src = NodeFactory(0, 0);
 const dest = NodeFactory(1, 2);
 
