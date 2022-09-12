@@ -69,6 +69,10 @@ function backTracking(visited, dest) {
   return path.reverse();
 }
 
+function knightMove(src, dest) {
+  const shortestPath = findShortestPath(src, dest);
+}
+
 const src = NodeFactory(3, 3);
 const dest = NodeFactory(4, 3);
 
