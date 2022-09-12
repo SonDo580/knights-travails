@@ -26,11 +26,14 @@ function findShortestPath(src, dest) {
     let col = node.col;
 
     if (row === dest.row && col === dest.col) {
+      visited.push(node);
       return visited;
     }
 
     if (visited.findIndex(node) === -1) {
       visited.push(node);
     }
+
+    // Check all 8 possible moves
   }
 }
