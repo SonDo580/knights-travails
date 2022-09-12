@@ -50,9 +50,9 @@ function findShortestPath(src, dest) {
 }
 
 // Show the path from destination to source
-function backTracking(visited, node) {
+function backTracking(visited, dest) {
   const path = [];
-  path.push(node);
+  path.push(dest);
 
   for (let i = visited.length - 1; i >= 0; i--) {
     // if (visited[i].prev )
