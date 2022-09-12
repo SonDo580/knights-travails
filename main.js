@@ -70,7 +70,7 @@ function nextMove(row, col, endRow, endCol) {
 
   let shortestPath = paths[0];
   for (let path of paths) {
-    if (path.length < shortestPath) {
+    if (path.length < shortestPath.length) {
       shortestPath = path;
     }
   }
