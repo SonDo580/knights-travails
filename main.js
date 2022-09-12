@@ -17,7 +17,7 @@ function findShortestPath(src, dest) {
   const queue = [];
   queue.push(src);
 
-  let visited = [];
+  const visited = [];
 
   while (queue.length > 0) {
     const node = queue.shift();
