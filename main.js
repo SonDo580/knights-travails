@@ -41,6 +41,7 @@ function findShortestPath(src, dest) {
 
       if (isValid(nextRow, nextCol)) {
         const nextNode = NodeFactory(nextRow, nextCol);
+        queue.push(nextNode);
       }
     }
   }
