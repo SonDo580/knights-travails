@@ -51,6 +51,10 @@ function findShortestPath(src, dest) {
 
 // Show the path from destination to source
 function backTracking(visited, dest) {
+  if (visited.length === 1) {
+    return visited;
+  }
+
   const path = [];
   path.push(dest);
 
