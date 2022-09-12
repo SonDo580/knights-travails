@@ -23,6 +23,7 @@ function knightMoves(src, dest) {
 
   while (queue.length > 0) {
     const node = queue.shift();
+    visited.push(node);
 
     let row = node.row;
     let col = node.col;
