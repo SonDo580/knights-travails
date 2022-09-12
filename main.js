@@ -32,16 +32,16 @@ function findShortestPath(src, dest) {
 
     if (visited.indexOf(node) === -1) {
       visited.push(node);
-    }
 
-    // Check all 8 possible moves
-    for (let i = 1; i <= 8; i++) {
-      let nextRow = row + rowMove[i];
-      let nextCol = col + colMove[i];
+      // Check all 8 possible moves
+      for (let i = 1; i <= 8; i++) {
+        let nextRow = row + rowMove[i];
+        let nextCol = col + colMove[i];
 
-      if (isValid(nextRow, nextCol)) {
-        const nextNode = NodeFactory(nextRow, nextCol);
-        queue.push(nextNode);
+        if (isValid(nextRow, nextCol)) {
+          const nextNode = NodeFactory(nextRow, nextCol);
+          queue.push(nextNode);
+        }
       }
     }
   }
@@ -49,7 +49,7 @@ function findShortestPath(src, dest) {
   return null; // If the path is not possible
 }
 
-const src = NodeFactory(1, 2);
-const dest = NodeFactory(3, 4);
+const src = NodeFactory(0, 0);
+const dest = NodeFactory(1, 2);
 
 console.log(findShortestPath(src, dest));
